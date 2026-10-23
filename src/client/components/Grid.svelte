@@ -114,7 +114,7 @@
 
 <div
   bind:this={gridEl}
-  class="grid grid-cols-9 select-none touch-none border-2 border-neutral-800 dark:border-neutral-200"
+  class="grid h-full w-full grid-cols-9 grid-rows-9 select-none touch-none border-2 border-neutral-800 dark:border-neutral-200"
   role="grid"
   aria-label="Sudoku grid"
   tabindex="-1"
@@ -143,7 +143,7 @@
             {hintDigit}
           </span>
         {:else}
-          <div class="grid h-full w-full grid-cols-3 p-px">
+          <div class="grid h-full min-h-0 w-full grid-cols-3 grid-rows-3 overflow-hidden p-px">
             {#each DIGITS as digit (digit)}
               <span
                 class={[

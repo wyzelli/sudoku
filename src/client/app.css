@@ -40,6 +40,14 @@ body {
     min-height: 260px;
 }
 
+/*
+ * The square is sized explicitly in both axes and the grid inside it uses nine
+ * equal minmax(0, 1fr) rows. Without this, rows were auto-sized from cell
+ * content (notes mini-grid, borders) and came out taller than the columns,
+ * so the grid overflowed .grid-fit and overlapped the number pad on short
+ * webviews such as the iPhone 12 mini (375x609).
+ */
 .grid-fit-square {
     position: relative;
+    flex: none;
 }

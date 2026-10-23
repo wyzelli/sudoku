@@ -858,7 +858,11 @@
 						bind:clientWidth={gridFitWidth}
 						bind:clientHeight={gridFitHeight}
 					>
-						<div class="grid-fit-square" style:width={gridSize}>
+						<div
+							class="grid-fit-square"
+							style:width={gridSize}
+							style:height={gridSize}
+						>
 							<Grid
 								{board}
 								{selection}
